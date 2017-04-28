@@ -15,6 +15,11 @@
 
 	<context:component-scan base-package="com.ufo.NettySocketioWebDemo.Controller" />
 
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
+	<mvc:resources location="/WEB-INF/img/" mapping="/img/**" />
+	
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -63,11 +68,19 @@
 	<tx:annotation-driven transaction-manager="transactionManager" /> -->
 
 	<mvc:annotation-driven />
-
-	<!-- <bean id="propertyConfigurer"
+	
+	<bean id="configProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>/WEB-INF/my.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
 		<property name="properties" ref="configProperties" />
-	</bean> -->
+	</bean>
 
 
 </beans>
