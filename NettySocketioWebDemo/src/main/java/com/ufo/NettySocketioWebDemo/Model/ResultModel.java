@@ -1,41 +1,41 @@
 package com.ufo.NettySocketioWebDemo.Model;
 
 public class ResultModel {
-	private boolean IsSuccess;
-	private Object Data;
-	private String ErrorMessage;
+    private boolean IsSuccess;
+    private Object Data;
+    private String ErrorMessage;
 
-	public ResultModel() {
+    public ResultModel() {
 
-	}
+    }
 
-	public ResultModel(boolean isSuccess, Object data, String errorMessage) {
-		IsSuccess = isSuccess;
-		Data = data;
-		ErrorMessage = errorMessage;
-	}
+    public ResultModel(boolean isSuccess, Object data, String errorMessage) {
+        IsSuccess = isSuccess;
+        Data = data;
+        ErrorMessage = errorMessage;
+    }
 
-	public boolean isIsSuccess() {
-		return IsSuccess;
-	}
+    public boolean isIsSuccess() {
+        return IsSuccess;
+    }
 
-	public void setIsSuccess(boolean isSuccess) {
-		IsSuccess = isSuccess;
-	}
+    public void setIsSuccess(boolean isSuccess) {
+        IsSuccess = isSuccess;
+    }
 
-	public String getErrorMessage() {
-		return ErrorMessage;
-	}
+    public String getErrorMessage() {
+        return ErrorMessage;
+    }
 
-	public void setErrorMessage(String errorMessage) {
-		ErrorMessage = errorMessage;
-	}
+    public void setErrorMessage(String errorMessage) {
+        ErrorMessage = errorMessage;
+    }
 
-	public Object getData() {
-		return Data;
-	}
+    public Object getData() {
+        return Data;
+    }
 
-	public void setData(Object data) {
-		Data = data;
-	}
+    public void setData(Object data) {
+        Data = data;
+    }
 }

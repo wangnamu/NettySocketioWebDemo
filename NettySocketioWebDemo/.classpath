@@ -19,6 +19,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/NettySocketioClient-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Users/tjpld/MyProjects/Solutions/SocketIOApplication/NettySocketioClient/NettySocketioClient/out/artifacts/NettySocketioClient_jar/NettySocketioClient.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
