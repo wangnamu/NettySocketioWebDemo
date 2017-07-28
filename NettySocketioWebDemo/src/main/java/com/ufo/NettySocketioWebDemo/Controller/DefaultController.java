@@ -277,6 +277,7 @@ public class DefaultController {
 
     /**
      * 发送文本
+     *
      * @param senderID
      * @param senderDeviceToken
      * @param chatID
@@ -374,7 +375,6 @@ public class DefaultController {
     public @ResponseBody
     List<ChatMessage> chatMessageList(
             @RequestParam(value = "userID", required = true) String userID,
-            @RequestParam(value = "senderDeviceToken", required = true) String senderDeviceToken,
             @RequestParam(value = "last", required = true) long last,
             @RequestParam(value = "current", required = true) long current) {
 
@@ -391,11 +391,8 @@ public class DefaultController {
                     }
                 }
 
-                System.out.println("getSenderDeviceToken->"+chatMessage.getSenderDeviceToken());
 
-                System.out.println("senderDeviceToken->"+senderDeviceToken);
-
-                if (chatMessage.getSenderID().equals(userID) && !chatMessage.getSenderDeviceToken().equals(senderDeviceToken)) {
+                if (chatMessage.getSenderID().equals(userID)) {
                     list.add(chatMessage);
                 }
             }

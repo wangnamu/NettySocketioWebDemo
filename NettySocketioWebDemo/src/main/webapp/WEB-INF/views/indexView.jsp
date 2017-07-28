@@ -61,7 +61,7 @@
 
         console.log(deviceToken)
 
-        var socket = io.connect('http://192.168.3.5:3000');
+        var socket = io.connect('http://192.168.19.74:3000');
 
         socket
             .on(
